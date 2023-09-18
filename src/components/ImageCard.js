@@ -5,7 +5,7 @@ const ImageCard = ({ image }) => {
       <div className="bg-clip-border mt-4 mx-4 rounded-xl overflow-hidden shadow-lg">
         <img src={image.webformatURL} alt="" className="w-full" />
       </div>
-      <div className="p-6">
+      <div className="p-6 overflow-hidden">
         <div className="mb-3">
           <span className="block antialiased tracking-normal font-sans text-xl leading-snug font-medium">
             Photo by @{image.user}
@@ -26,7 +26,7 @@ const ImageCard = ({ image }) => {
           </li>
         </ul>
       </div>
-      <div className="p-6 mt-auto">
+      <div className="p-6 mt-auto overflow-hidden">
         {tags.map((tag, index) => (
           <span
             key={index}
