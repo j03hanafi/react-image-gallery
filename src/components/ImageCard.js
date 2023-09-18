@@ -1,15 +1,17 @@
 const ImageCard = ({ image }) => {
   const tags = image.tags.split(",");
   return (
-    <div className="max-w-sm rounded-2xl shadow-xl overflow-hidden">
-      <div>
+    <div className="flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 w-full max-w-sm shadow-lg">
+      <div className="bg-clip-border mt-4 mx-4 rounded-xl overflow-hidden shadow-lg">
         <img src={image.webformatURL} alt="" className="w-full" />
       </div>
-      <div className="px-6 py-4">
-        <div className="font-bold text-purple-500 text-xl mb-2">
-          Photo by {image.user}
+      <div className="p-6">
+        <div className="mb-3">
+          <span className="block antialiased tracking-normal font-sans text-xl leading-snug font-medium">
+            Photo by @{image.user}
+          </span>
         </div>
-        <ul>
+        <ul className="block antialiased font-sans text-base font-light leading-relaxed text-gray-700">
           <li>
             <strong>Views: </strong>
             {image.views}
@@ -24,11 +26,11 @@ const ImageCard = ({ image }) => {
           </li>
         </ul>
       </div>
-      <div className="px-6 py-4">
+      <div className="p-6 mt-auto">
         {tags.map((tag, index) => (
           <span
             key={index}
-            className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+            className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-sans text-gray-700 mr-2"
           >
             #{tag}
           </span>

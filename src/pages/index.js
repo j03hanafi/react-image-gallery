@@ -29,7 +29,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="container mx-auto">
+      <main className="container mx-auto my-16">
         <ImageSearch searchText={(text) => setTerm(text)} />
         {!isLoading && images.length === 0 && (
           <h1 className="text-center text-6xl mx-auto mt-32">
